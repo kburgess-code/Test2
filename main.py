@@ -1,16 +1,29 @@
-# This is a sample Python script.
+class Dog:
+    def __init__(self,breed,name,):
+        self.breed = breed
+        self.name = name
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def bark(self,name):
+        print(f"{name} Barks!")
+
+#START#
+dog_list = []
+print("Welcome to the Dog House!\n")
+while True:
+    response = input("Would you like to add a dog? (y/n): ")
+    if response.casefold() == "y":
+        breed = input("What is the dogs breed?: ")
+        name = input("What the dogs name?: ")
+        dog_list.append(Dog(breed,name))
+    elif response.casefold() == "n":
+        break
+    else:
+        print("INVALID INPUT")
+
+print("\nDogs in the Dog House:")
+#print(dog_list)
+for dog in dog_list:    #for loops in Python -> the 'dog' word here is used as an iterator
+    dog.bark(dog.name)
+    print("BREED:",dog.breed,"\nNAME:",dog.name,end="\n\n")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
