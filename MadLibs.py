@@ -1,5 +1,6 @@
 """
-Filename: <assignment>.pyAuthor: <LastName,FirstName>
+Filename: <assignment>.py
+Author: <LastName,FirstName>
 Created: MM/DD/YYYY
 Instructor: Burgess
 """
